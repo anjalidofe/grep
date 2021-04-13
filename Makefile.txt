@@ -1,5 +1,5 @@
 all : anjaligrep clean
-main : main.o file.o ll.o
+anjaligrep : main.o file.o ll.o
 	cc main.o file.o ll.o -o anjaligrep
 main.o : main.c ll.h header.h
 	cc -c main.c -wall
