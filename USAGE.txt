@@ -1,0 +1,56 @@
+	Default usage without using flags/options
+
+./anjaligrep pattern filename 
+./anjaligrep pattern1 file1 file2 file3....... //grep for multiple files
+
+
+	Default usage with flags/options
+
+./anjaligrep -option pattern filename
+
+-v, -w, -i
+./anjaligrep -option filename //works with multiple files too
+
+-h, -H
+./anjaligrep -H pattern file1 file2 file3.....//for single as well as multiple files
+
+./anjaligrep -m NUMBER pattern filename
+
+./anjaligrep -e pattern filename
+./anjaligrep -e pattern filename -e pattern2 filename2...
+
+
+	Combinations
+
+-cw, -ci, -vi, -cv, -cvi, -cvw, -vw, -iw
+Usage : ./anjaligrep -option pattern filename //all above have same usage and works for multiple files too
+
+./anjaligrep -n -v -H pattern filename
+./anjaligrep -v -n -H pattern filename
+./anjaligrep -v -n -h pattern filename
+./anjaligrep -n -v -h pattern filename
+./anjaligrep -n -v pattern filename
+./anjaligrep -v -n pattern filename
+ ./anjaligrep -n -h pattern filename
+./anjaligrep -n -option -h pattern filename
+./anjaligrep -option -n -h pattern filename
+./anjaligrep -n -option pattern filename
+./anjaligrep -option -n pattern filename
+./anjaligrep -n -H pattern filename // in place of -n could be v or i or w or c
+
+
+./anjaligrep -m NUMBER -H pattern filename //for multiple files too
+./anjaligrep -m NUMBER -h pattern filename //for multiple files too
+./anjaligrep -m NUMBER -n pattern filename //for multiple files too
+./anjaligrep -m NUMBER -n -h pattern filename
+./anjaligrep -m NUMBER -n -H pattern filename
+./anjaligrep -i -e pattern filename //could be -v, -w or -c in place of -i
+./anjaligrep -option -e pattern1 file1 -option -e pattern2 file2....
+./anjaligrep -m NUMBER -e pattern filename -option -e pattern filename
+
+./anjaligrep -l pattern 
+./anjaligrep -r pattern
+./anjaligrep -r
+./anjaligrep --help
+./anjaligrep -V
+./anjaligrep -version
